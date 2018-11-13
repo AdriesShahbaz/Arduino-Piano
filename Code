@@ -1,6 +1,6 @@
 #include <CapacitiveSensor.h>
 
-#define speaker 11
+int speaker = 11;
 CapacitiveSensor cs_2_3 = CapacitiveSensor(2,3);
 CapacitiveSensor cs_2_4 = CapacitiveSensor(2,4);
 CapacitiveSensor cs_2_5 = CapacitiveSensor(2,5);
@@ -13,7 +13,6 @@ CapacitiveSensor cs_2_10 = CapacitiveSensor(2,10);
 
 void setup() {
 cs_2_6.set_CS_AutocaL_Millis(0xFFFFFFFF);
-Serial.begin(9600);
 }
 
 void loop() {
@@ -29,42 +28,32 @@ long total6 =  cs_2_8.capacitiveSensor(800);
 long total7 =  cs_2_9.capacitiveSensor(800);
 long total8 =  cs_2_10.capacitiveSensor(800);
 
-//Serial.println(total1);
-//Serial.println(total2);
-Serial.println(total3);
-//Serial.println(total4);
-//Serial.println(total5);
-//Serial.println(total6);
-//Serial.println(total7);
-//Serial.println(total8);
-delay(100);
-
-if (total1 > 500) {
-  tone(speaker, 100);
+if (total1 > 300) {
+  tone(speaker, 2300);
 }
-if (total2 > 500) {
-  tone(speaker, 115);
+if (total2 > 300) {
+  tone(speaker, 2600);
 }
-if (total3 > 500) {
-  tone(speaker, 130);
+if (total3 > 300) {
+  tone(speaker, 2900);
 }
-if (total4 > 500) {
-  tone(speaker, 135);
+if (total4 > 300) {
+  tone(speaker, 3200);
 }
-if (total5 > 500) {
-  tone(speaker, 150);
+if (total5 > 300) {
+  tone(speaker, 3500);
 }
-if (total6 > 500) {
-  tone(speaker, 165);
+if (total6 > 300) {
+  tone(speaker, 3800);
 }
-if (total7 > 500) {
-  tone(speaker, 180);
+if (total7 > 300) {
+  tone(speaker, 4100);
 }
-if (total8 > 500) {
-  tone(speaker, 195); 
+if (total8 > 300) {
+  tone(speaker, 4400); 
 }
-if(total1 <= 500 || total2 <= 500 || total3 <= 500 || total4 <= 500 || total5 <= 500
-|| total6 <= 500 || total7 <= 500 || total8 <=500) {
+if(total1 <= 300 && total2 <= 300 && total3 <= 300 && total4 <= 300 && total5 <= 300
+&& total6 <= 300 && total7 <= 300 && total8 <= 300) {
 noTone(speaker);
 }
 delay(10);
