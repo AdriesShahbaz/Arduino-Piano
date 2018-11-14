@@ -32,28 +32,28 @@ long total7 =  cs_2_9.capacitiveSensor(800);
 long total8 =  cs_2_10.capacitiveSensor(800);
 
 if (total1 > 300) {
-  tone(speaker, NOTE_F3);
+  tone(speaker, NOTE_C6);
 }
 if (total2 > 300) {
-  tone(speaker, NOTE_G3);
+  tone(speaker, NOTE_D6);
 }
 if (total3 > 300) {
-  tone(speaker, NOTE_A3);
+  tone(speaker, NOTE_E6);
 }
 if (total4 > 300) {
-  tone(speaker, NOTE_B3);
+  tone(speaker, NOTE_F6);
 }
 if (total5 > 300) {
-  tone(speaker, NOTE_C4);
+  tone(speaker, NOTE_G6);
 }
 if (total6 > 300) {
-  tone(speaker, NOTE_D4);
+  tone(speaker, NOTE_A7);
 }
 if (total7 > 300) {
-  tone(speaker, NOTE_E4);
+  tone(speaker, NOTE_B7);
 }
 if (total8 > 300) {
-  tone(speaker, NOTE_F4); 
+  tone(speaker, NOTE_C7); 
 }
 if(total1 <= 300 && total2 <= 300 && total3 <= 300 && total4 <= 300 && total5 <= 300
 && total6 <= 300 && total7 <= 300 && total8 <= 300) {
