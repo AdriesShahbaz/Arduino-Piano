@@ -1,6 +1,4 @@
 #include <CapacitiveSensor.h>
-
-#include <CapacitiveSensor.h>
 #include "Pitches.h"
 
 #define speaker 11
