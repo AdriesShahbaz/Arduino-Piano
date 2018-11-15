@@ -26,3 +26,6 @@ Design:
 - A piece of paper with expertly laid out strips of aluminum foil (piano keys)
 - Under each note will be a copper wire attached to the circut board
 - A speaker in order to play the tone of each note
+
+Since video files are too large, I am linking my video demonstration to a seperate website. The link can be found below:
+https://www.dropbox.com/s/j3x3e9xsv96auto/20181114_124332.mp4?dl=0
