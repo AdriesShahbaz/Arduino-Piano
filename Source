@@ -1,7 +1,8 @@
-#include <CapacitiveSensor.h>
-#include "Pitches.h"
+#include <CapacitiveSensor.h> //Include the capacitive sensor library
+#include "Pitches.h" //Use the pitches file
 
 #define speaker 11
+//All capacitive sensor's must be connected to the send pin (pin 2 in this case)
 CapacitiveSensor cs_2_3 = CapacitiveSensor(2,3);
 CapacitiveSensor cs_2_4 = CapacitiveSensor(2,4);
 CapacitiveSensor cs_2_5 = CapacitiveSensor(2,5);
@@ -13,13 +14,14 @@ CapacitiveSensor cs_2_10 = CapacitiveSensor(2,10);
 
 
 void setup() {
-cs_2_6.set_CS_AutocaL_Millis(0xFFFFFFFF);
+cs_2_6.set_CS_AutocaL_Millis(0xFFFFFFFF); //This is to make sure it does not malfunction (Safety net)
 }
 
 void loop() {
 
 long start = millis();
 
+//Setting the sensitivity for each sensor
 long total1 =  cs_2_3.capacitiveSensor(800);
 long total2 =  cs_2_4.capacitiveSensor(800);
 long total3 =  cs_2_5.capacitiveSensor(800);
@@ -29,6 +31,7 @@ long total6 =  cs_2_8.capacitiveSensor(800);
 long total7 =  cs_2_9.capacitiveSensor(800);
 long total8 =  cs_2_10.capacitiveSensor(800);
 
+//The next couple of if statements revolve around if the capacitive sensor detects a reading over 300 (if it is touched) then play a note
 if (total1 > 300) {
   tone(speaker, NOTE_C6);
 }
@@ -53,9 +56,10 @@ if (total7 > 300) {
 if (total8 > 300) {
   tone(speaker, NOTE_C7); 
 }
+//If all the values are below 300 (none are being touched) then turn off the speaker
 if(total1 <= 300 && total2 <= 300 && total3 <= 300 && total4 <= 300 && total5 <= 300
 && total6 <= 300 && total7 <= 300 && total8 <= 300) {
 noTone(speaker);
 }
-delay(10);
+delay(10); //Small delay so the arduino does not malfunction
 }
