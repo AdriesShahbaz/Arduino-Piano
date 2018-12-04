@@ -27,5 +27,13 @@ Design:
 - Under each note will be a copper wire attached to the circut board
 - A speaker in order to play the tone of each note
 
+Challanges Overcome:
+- Finding a decent adhesive to make sure the wires stay put on the aluminium. Electrical Tape
+- Finding a place to put each aluminum strip (piano key). I taped each aluminum strip to a paper base.
+
+Things I Would Do Differently To Improve:
+- Make the design more portable. At the current moment, it is very difficult to transport my piano anywhere from the computer. If I had more time I would make a case for the piano and add an external 5V power supply so I could carry it around seemlesly.
+- Implement a MIDI device so I could play real piano notes when each aluminum strip is touched instead of a piezo trying to imitate the sound of a piano
+
 Since video files are too large, I am linking my video demonstration to a seperate website. The link can be found below:
 https://www.dropbox.com/s/j3x3e9xsv96auto/20181114_124332.mp4?dl=0
